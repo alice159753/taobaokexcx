@@ -1,0 +1,32 @@
+<import src="../templates/tips.wxml"/>
+
+<view class="page">
+
+<!--左边-->
+    <view class="tab">
+
+        <scroll-view class="" scroll-y="true">
+          <view wx:for="{{category1list}}" wx:key="key" class="people {{item.is_active==1 ? 'categoryactive':'' }}" id="{{item.no}}" catchtap="changecategory">
+            {{item.title}}
+          </view>
+        </scroll-view>
+
+    </view>
+
+    <view class="cont">
+        <view class="list">
+            
+            <navigator hover-class="none" class="single" wx:key wx:for="{{category2list}}" data-category_no="{{item.no}}" url="../product/productlists?category_no1={{item.parent_no==0?item.no:item.parent_no}}&category_no2={{item.parent_no==0?item.parent_no:item.no}}&title={{item.title}}">
+
+     <image  class="single_top" src="{{item.pic}}"></image>
+     <view class="single_bot">{{item.title}}</view>
+            </navigator>
+            
+        </view>
+
+    </view>
+</view>
+
+
+<!--微信登录-->
+<template is="tip3" wx:if="{{isloginshow}}" />

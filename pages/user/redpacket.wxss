@@ -1,0 +1,18 @@
+.redpacket
+{
+  width:75%;
+  height:800rpx;
+  padding-left:13%;
+  padding-top:8%;
+}
+
+.sub_btn{
+    margin-top: 80rpx;
+    border-radius: 6rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    color: #fff;
+    background-color: #f8a6cc;
+    width:50%;
+}

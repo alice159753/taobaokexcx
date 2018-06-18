@@ -1,0 +1,20 @@
+<view class="title1">商品查券 教程说明</view>
+
+<view class="title2_box1">
+  <view class="title2_box2">
+    <view class="title2">如何查找淘宝/天猫商品是否有劵?</view>
+  </view>
+</view>
+
+
+<view class="step">
+
+<image src="../../images/help_step1.png" ></image>
+<image src="../../images/help_step2.png" ></image>
+<image src="../../images/help_step3.png" ></image>
+<image src="../../images/help_step4.png" ></image>
+<image src="../../images/help_step5.png" ></image>
+<image src="../../images/help_step6.png" ></image>
+
+
+</view>

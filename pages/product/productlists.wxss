@@ -1,0 +1,272 @@
+page {
+  border-top: none;
+}
+.page {
+  font-family: PingFangSC-Regular;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page .header {
+  width:100%;
+  position: fixed;
+  top:0rpx;
+  left:0rpx;
+  z-index:999;
+  background-color:#fff;
+}
+.page .header .tab {
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.page .header .tab .tab_single {
+  line-height: 88rpx;
+  font-size: 30rpx;
+  color: #333333;
+  box-sizing: border-box;
+  text-align: center;
+}
+.page .header .tab .single_one {
+  position: absolute;
+  left: 60rpx;
+  width: 66rpx;
+  text-align: center;
+}
+.page .header .tab .single_two {
+  position: absolute;
+  left: 33.5%;
+  width: 66rpx;
+  text-align: center;
+}
+.page .header .tab .single_thr {
+  position: absolute;
+  right: 32.5%;
+  width: 66rpx;
+  text-align: center;
+}
+.page .header .tab .single_fou {
+  position: absolute;
+  right: 33rpx;
+  width: 120rpx;
+  text-align: center;
+}
+.page .header .tab .active {
+  color: #f8a6cc;
+  /*border-bottom: 1px solid #f8a6cc;*/
+}
+
+.page .header .tab  .sort_image_shang1
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:18rpx;
+  left:17%;
+}
+.page .header .tab  .sort_image_xia1
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:40rpx;
+  left:17%;
+}
+
+.page .header .tab  .sort_image_shang2
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:18rpx;
+  left:42%;
+}
+.page .header .tab  .sort_image_xia2
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:40rpx;
+  left:42%;
+}
+.page .header .tab  .sort_image_shang3
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:18rpx;
+  left:68%;
+}
+.page .header .tab  .sort_image_xia3
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:40rpx;
+  left:68%;
+}
+
+.page .header .tab  .sort_image_shang4
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:18rpx;
+  left:92%;
+}
+.page .header .tab  .sort_image_xia4
+{
+  width: 35rpx;
+  height: 35rpx;
+  position: fixed;
+  top:40rpx;
+  left:92%;
+}
+
+.productlists {
+  width: 100%;
+  height: 1000rpx;
+  position: relative;
+  margin-top:114rpx;
+}
+
+.productlists .recommend_products
+{
+  width: 100%;
+  height: 860rpx;
+  position: absolute;
+  top: 20rpx;
+}
+
+.productlists  .recommend_products .recommend_products_single {
+  margin-bottom: 40rpx;
+  width: 100%;
+  height: 240rpx;
+  position: relative;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_pic {
+  width: 184rpx;
+  height: 240rpx;
+  position: absolute;
+  left: 36rpx;
+  top: 0;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r {
+  height: 240rpx;
+  width: 600rpx;
+  position: absolute;
+  top: 0;
+  left: 248rpx;
+  background-color: #fff;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_title {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333;
+  font-weight: 250;
+  position: absolute;
+  top: 50rpx;
+  left: 0;
+  padding-right:100rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_shop_name {
+  position: absolute;
+  left: 0;
+  top: 0rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_shop_name .recommend_products_single_r_look_pic {
+  width: 26rpx;
+  height: 18rpx;
+  display: inline-block;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_shop_name .recommend_products_single_r_look_num {
+  font-size: 26rpx;
+  color: #666666;
+  display: inline-block;
+  margin-left: 6rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_look {
+  position: absolute;
+  left: 0;
+  top: 130rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_look .recommend_products_single_r_look_pic {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_look .recommend_products_single_r_look_num {
+  font-size: 26rpx;
+  color: #666666;
+  display: inline-block;
+  margin-left: 6rpx;
+}
+
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price {
+  position: absolute;
+  left: 0;
+  top: 180rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  display: flex;
+  flex-direction:row;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .juanhou 
+{
+  padding-top: 10rpx;
+  color:#666;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .price 
+{
+    font-size: 34rpx;
+    font: left;
+    color:#f8a6cc;
+    margin-top:10rpx;
+    margin-left:20rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .sale_price 
+{
+    font-size: 26rpx;
+    font: left;
+    margin-top:10rpx;
+    margin-left:20rpx;
+    text-decoration:line-through;
+    color:#bbbbbb;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .buy_botton 
+{
+    border-radius: 6rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    color: #fff;
+    background-color: #f8a6cc;
+    width: 200rpx;
+    border:0rpx;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .recommend_products_single_r_price_l 
+{
+  width: 290rpx;
+  display: flex;
+  flex-direction:row;
+
+}
+.buy_botton_now
+{
+   position: fixed;
+   bottom: 0px;
+   background-color: #f8a6cc;
+   width: 100%;
+   color:#fff;
+}

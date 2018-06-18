@@ -1,0 +1,118 @@
+<import src="../templates/tips.wxml"/>
+
+<view>
+
+<!--商品详细-->
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
+      <block wx:for="{{productDetail.picLists}}" wx:for-index="index" wx:key="key">    
+        <swiper-item>    
+          <image src="{{item.pic_url}}" class="slide-image" mode="aspectFill" lazy-load="true"/>    
+        </swiper-item>    
+      </block>    
+</swiper>  
+
+
+<view class="productdetail">
+    <view class="details">
+        <image src="../../images/{{productDetail.shop_pic}}" class="product_shop_pic"></image>
+        <view class="shop_name">{{productDetail.shop_name}}</view>
+        <view class="product_title">{{productDetail.title}}</view>
+
+        <view class="price_box">
+          <view class="juanhou">卷后价</view>
+          <view class="price">¥{{productDetail.sale_price}}</view>
+          <view class="sale_price">¥{{productDetail.price}}</view>
+          <view class="sale_num">{{productDetail.sale_num}}万人已买</view>
+        </view>
+
+  <!--优惠卷-->
+<view class="stamp stamp01">
+    <view class="par">
+      <view class="view_p">{{productDetail.shop_name}}</view>
+      <view class="sign view_sub">￥{{productDetail.coupon_save_price}}<view class="youhuijuan">优惠券({{productDetail.coupon_start_date_format}}~{{productDetail.coupon_end_date_format}})</view></view>
+      
+    </view>
+    <view class="copy">
+      <button class="lijishiyong_botton" type="primary" bindtap='lijigoumai'>立即使用</button>
+
+    </view>
+</view>
+    </view>
+</view>
+
+
+<!--你可能会喜欢-->
+<view class="shop bgf">
+    <view class="blue"></view>
+    <view class="shop_title">你可能会喜欢</view>
+    <navigator hover-class="none" url="../product/productlists?category_no={{productDetail.category_no}}&title={{productDetail.category_title}}" hover-class='none' class="shop_more">
+        <view class="shop_more_font">更多</view>
+       <image class="shop_more_pic" src="../../images/arrow_r.png"></image>
+    </navigator>
+</view>
+
+<!--商品-->
+<view class="productlists">
+  <view class="recommend_products">
+    <view hover-class='none' wx:key wx:for="{{productlists}}" data-product_id="{{item.product_id}}"
+                  class="recommend_products_single">
+
+<navigator url="../product/product?no={{item.no}}">
+  <!--左边图片-->
+                    <image src="{{item.pic_url}}" class="recommend_products_single_pic"></image>
+
+  <!--右边内容-->
+                    <view class="recommend_products_single_r">
+  <!--第一行-->
+                        <view class="recommend_products_single_shop_name">
+                            <image class="recommend_products_single_r_look_pic" src="../../images/{{item.shop_pic}}"></image>
+                            <view class="recommend_products_single_r_look_num">{{item.shop_name}}</view>
+                        </view>
+  <!--第二行-->
+                        <view class="recommend_products_single_r_title">{{item.title}}</view>
+
+  <!--第三行-->
+                        <view class="recommend_products_single_r_look">
+                            <image class="recommend_products_single_r_look_pic" src="../../images/eye.png"></image>
+                            <view class="recommend_products_single_r_look_num">{{item.sale_num}}</view>
+
+                            <image class="recommend_products_single_r_look_pic ml20" src="../../images/time.png"></image>
+                            <view class="recommend_products_single_r_look_num">{{item.coupon_start_date_format}}~{{item.coupon_end_date_format}}</view>
+
+                        </view>
+  <!--第四行-->
+            <view class="recommend_products_single_r_price">
+            <view class="recommend_products_single_r_price_l">
+              <view class="juanhou">卷后:</view>
+              <view class="price">¥{{item.sale_price}}</view>
+              <view class="sale_price">¥{{item.price}}</view>
+            </view>
+
+            <button class="buy_botton" type="primary">立即购买</button>
+
+            </view>
+
+        </view>
+</navigator>
+    </view>
+
+  </view>
+</view>
+
+<view style="height:100rpx;margin-top:500rpx;"></view>
+
+<button class="buy_botton_now" bindtap='lijigoumai'>淘口令领劵</button>
+
+
+
+</view>
+
+
+<template is="tip2" wx:if="{{istip}}" data="{{...tip1Data}}" />
+
+
+<!--微信登录-->
+<template is="tip3" wx:if="{{isloginshow}}" />        
+
+
+

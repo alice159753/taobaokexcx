@@ -1,0 +1,92 @@
+<import src="../templates/load.wxml"/>
+<import src="../templates/tips.wxml"/>
+
+<view class="page">
+    <view class="header">
+        <view class="tab">
+            <view class="tab_single single_one {{istab==0?'active':''}}">
+                <view catchtap="taplist" data-order="sale_num desc" data-id="0" >销量</view>
+                <image class="sort_image_shang1" src="../../images/{{shang0}}" data-order="sale_num asc" data-id="0" catchtap="taplist"></image>
+                <image class="sort_image_xia1" src="../../images/{{xia0}}" data-order="sale_num desc" data-id="0" catchtap="taplist"></image>
+
+            </view>
+            <view class="tab_single single_two {{istab==1?'active':''}}">
+               <view catchtap="taplist" data-order="price/100-coupon_save_price desc"  data-id="1" >价格</view>
+                <image class="sort_image_shang2" src="../../images/{{shang1}}" data-order="price/100-coupon_save_price asc" data-id="1" catchtap="taplist"></image>
+                <image class="sort_image_xia2" src="../../images/{{xia1}}" data-order="price/100-coupon_save_price desc" data-id="1" catchtap="taplist"></image>
+
+            </view>
+            <view class="tab_single single_thr {{istab==2?'active':''}}">
+                <view catchtap="taplist" data-order="coupon_save_price desc"  data-id="2" >卷额</view>
+                <image class="sort_image_shang3" src="../../images/{{shang2}}" data-order="coupon_save_price asc" data-id="2" catchtap="taplist"></image>
+                <image class="sort_image_xia3" src="../../images/{{xia2}}" data-order="coupon_save_price desc" data-id="2" catchtap="taplist"></image>
+
+            </view>
+            <view class="tab_single single_fou {{istab==3?'active':''}}">
+                <view catchtap="taplist" data-order="no desc" data-id="3">综合</view>
+                <image class="sort_image_shang4" src="../../images/{{shang3}}" catchtap="taplist" data-order="no asc" data-id="3"></image>
+                <image class="sort_image_xia4" src="../../images/{{xia3}}" catchtap="taplist" data-order="no desc" data-id="3"></image>
+
+            </view>
+        </view>
+    </view>
+
+   
+
+
+<!--商品-->
+<view class="productlists">
+  <view class="recommend_products">
+    <view hover-class='none' wx:key wx:for="{{productlists}}" data-product_id="{{item.product_id}}"
+                  class="recommend_products_single">
+
+<navigator url="../product/product?no={{item.no}}">
+  <!--左边图片-->
+                    <image src="{{item.pic_url}}" class="recommend_products_single_pic"></image>
+
+  <!--右边内容-->
+                    <view class="recommend_products_single_r">
+  <!--第一行-->
+                        <view class="recommend_products_single_shop_name">
+                            <image class="recommend_products_single_r_look_pic" src="../../images/{{item.shop_pic}}"></image>
+                            <view class="recommend_products_single_r_look_num">{{item.shop_name}}</view>
+                        </view>
+  <!--第二行-->
+                        <view class="recommend_products_single_r_title">{{item.title}}</view>
+
+  <!--第三行-->
+                        <view class="recommend_products_single_r_look">
+                            <image class="recommend_products_single_r_look_pic" src="../../images/eye.png"></image>
+                            <view class="recommend_products_single_r_look_num">{{item.sale_num}}</view>
+
+                            <image class="recommend_products_single_r_look_pic ml20" src="../../images/time.png"></image>
+                            <view class="recommend_products_single_r_look_num">{{item.coupon_start_date_format}}~{{item.coupon_end_date_format}}</view>
+
+                        </view>
+  <!--第四行-->
+            <view class="recommend_products_single_r_price">
+            <view class="recommend_products_single_r_price_l">
+              <view class="juanhou">卷后:</view>
+              <view class="price">¥{{item.sale_price}}</view>
+              <view class="sale_price">¥{{item.price}}</view>
+            </view>
+
+            <button class="buy_botton" type="primary">立即购买</button>
+
+            </view>
+
+        </view>
+</navigator>
+    </view>
+
+    <template is="load" wx-if="{{show}}"/>
+
+  </view>
+</view>
+
+
+</view>
+
+
+<!--微信登录-->
+<template is="tip3" wx:if="{{isloginshow}}" />

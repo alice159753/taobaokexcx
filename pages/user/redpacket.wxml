@@ -1,0 +1,9 @@
+<view>
+<image src="../../images/rederweima.jpg" class="redpacket"></image>
+
+</view>
+
+
+    <view>
+        <button class="sub_btn" bindtap='redpacket_submit'>立即领取</button>
+    </view>

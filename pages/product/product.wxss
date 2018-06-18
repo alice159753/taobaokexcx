@@ -1,0 +1,372 @@
+.swiper {
+  height: 600rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+
+.productdetail {
+  width: 100%;
+  height: 440rpx;
+  position: relative;
+}
+.productdetail .details
+{
+  width: 100%;
+  height: 860rpx;
+  position: absolute;
+  top: 0rpx;
+}
+
+.product_shop_pic
+{
+  width: 26rpx;
+  height: 18rpx;
+  display: inline-block;
+  padding-left: 20rpx;
+}
+.shop_name
+{
+  font-size: 26rpx;
+  color: #666666;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.product_title
+{
+  font-size: 34rpx;
+  line-height: 34rpx;
+  color: #333;
+  font-weight: 250;
+  position: absolute;
+  top: 70rpx;
+  left: 0;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.price_box
+{
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  position: absolute;
+  top: 162rpx;
+  left: 0;
+  padding-left: 20rpx;
+}
+.price_box .juanhou
+{
+    height:36rpx;
+    color:white;
+    font-size:26rpx;
+    background: -webkit-linear-gradient(left, #FF7C00 , #FF1300); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #FF7C00, #FF1300); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #FF7C00, #FF1300); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #FF7C00 , #FF1300); /* 标准的语法（必须放在最后） */
+    margin-top:15rpx;
+}
+
+.price_box .price
+{
+    font-size: 44rpx;
+    font: left;
+    color:#f8a6cc;
+    margin-left:30rpx;
+}
+.price_box .sale_price 
+{
+    font-size: 28rpx;
+    font: left;
+    margin-top:18rpx;
+    margin-left:40rpx;
+    text-decoration:line-through;
+    color:#bbbbbb;
+    width:300rpx;
+}
+
+.price_box .sale_num
+{
+    font-size: 28rpx;
+    color:#bbbbbb;
+    margin-top:8px;
+}
+
+.stamp {
+	width: 95%;
+	height: 180rpx;
+	padding: 0 10px;
+	margin-bottom: 50px;
+	position: absolute;
+  top:250rpx;
+	overflow: hidden;
+
+}
+.stamp:before {
+	content: '';
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:10px;
+	right:10px;
+	z-index: -1;
+}
+.stamp .par {
+	float: left;
+  width:450rpx;
+	border-right:2px dashed rgba(255, 255, 255, .3);
+	text-align: left;
+  padding-top:30rpx;
+  padding-left:20rpx;
+}
+.stamp .par .view_p {
+	color:#fff;
+	font-size: 16px;
+	line-height: 21px;
+}
+.stamp .par .sign {
+	font-size: 34px;
+}
+.stamp .par .view_sub {
+	position: relative;
+	top:-5px;
+	color:rgba(255, 255, 255, .8);
+}
+.stamp .copy {
+	display: inline-block;
+  width:200rpx;
+	vertical-align: text-bottom;
+	font-size: 34rpx;
+	color:rgb(255,255,255);
+	line-height: initial;
+  margin-top:8px;
+  margin-left:8rpx;
+}
+.stamp .copy .view_p {
+	font-size: 16px;
+	margin-top: 15px;
+}
+.stamp01 {
+	background: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 5px, #f8a6cb 5px);
+	background-size: 15px 15px;
+	background-position: 9px 3px;
+}
+.stamp01:before {
+	background-color:#f8a6cb;
+}
+
+.stamp .youhuijuan 
+{
+  display:inline-block;
+  font-size:34rpx;
+  margin-left:20rpx;
+}
+
+.stamp .lijishiyong_botton
+{
+    border-radius: 6rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    color: #000;
+    background-color: #fff;
+    width: 200rpx;
+    border:0rpx;
+    margin-top:43rpx;
+    margin-left:18rpx
+}
+
+.shop {
+  overflow: hidden;
+  width: 100%;
+  min-height: 80rpx;
+  position: relative;
+  border:1rpx solid #f2f2f2;
+}
+
+.shop .blue {
+  width: 10rpx;
+  height: 32rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  background-color: #f8a6cc;
+}
+
+.shop .shop_title {
+  color: #f8a6cc;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  position: absolute;
+  left: 36rpx;
+  top: 20rpx;
+}
+.shop .shop_more {
+  width: 150rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+}
+
+.shop .shop_more .shop_more_font {
+  font-size: 34rpx;
+  color: #bbbbbb;
+  position: absolute;
+  left: 25rpx;
+}
+.shop .shop_more .shop_more_pic {
+  width: 15rpx;
+  height: 26rpx;
+  position: absolute;
+  top: 4rpx;
+  left: 100rpx;
+}
+
+.productlists {
+  width: 100%;
+  height: 1000rpx;
+  position: relative;
+}
+
+.productlists .recommend_products
+{
+  width: 100%;
+  height: 860rpx;
+  position: absolute;
+  top: 20rpx;
+}
+
+.productlists  .recommend_products .recommend_products_single {
+  margin-bottom: 40rpx;
+  width: 100%;
+  height: 240rpx;
+  position: relative;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_pic {
+  width: 184rpx;
+  height: 240rpx;
+  position: absolute;
+  left: 36rpx;
+  top: 0;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r {
+  height: 240rpx;
+  width: 600rpx;
+  position: absolute;
+  top: 0;
+  left: 248rpx;
+  background-color: #fff;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_title {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333;
+  font-weight: 250;
+  position: absolute;
+  top: 50rpx;
+  left: 0;
+  padding-right:100rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_shop_name {
+  position: absolute;
+  left: 0;
+  top: 0rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_shop_name .recommend_products_single_r_look_pic {
+  width: 26rpx;
+  height: 18rpx;
+  display: inline-block;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_shop_name .recommend_products_single_r_look_num {
+  font-size: 26rpx;
+  color: #666666;
+  display: inline-block;
+  margin-left: 6rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_look {
+  position: absolute;
+  left: 0;
+  top: 130rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_look .recommend_products_single_r_look_pic {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_look .recommend_products_single_r_look_num {
+  font-size: 26rpx;
+  color: #666666;
+  display: inline-block;
+  margin-left: 6rpx;
+}
+
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price {
+  position: absolute;
+  left: 0;
+  top: 180rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  font-size: 26rpx;
+  display: flex;
+  flex-direction:row;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .juanhou 
+{
+  padding-top: 10rpx;
+  color:#666;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .price 
+{
+    font-size: 34rpx;
+    font: left;
+    color:#f8a6cc;
+    margin-top:10rpx;
+    margin-left:20rpx;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .sale_price 
+{
+    font-size: 26rpx;
+    font: left;
+    margin-top:10rpx;
+    margin-left:20rpx;
+    text-decoration:line-through;
+    color:#bbbbbb;
+}
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .buy_botton 
+{
+    border-radius: 6rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    font-size: 30rpx;
+    color: #fff;
+    background-color: #f8a6cc;
+    width: 200rpx;
+    border:0rpx;
+}
+
+.productlists .recommend_products .recommend_products_single .recommend_products_single_r .recommend_products_single_r_price .recommend_products_single_r_price_l 
+{
+  width: 290rpx;
+  display: flex;
+  flex-direction:row;
+
+}
+.buy_botton_now
+{
+   position: fixed;
+   bottom: 0px;
+   background-color: #f8a6cc;
+   width: 100%;
+   color:#fff;
+}
