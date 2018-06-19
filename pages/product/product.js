@@ -67,9 +67,10 @@ Page({
       })
     }
 
+    console.log(app.globalData.userInfo);
 
     //商品详情
-    product_detail(options.no).then((res) => {
+    product_detail(app.globalData.userInfo.user_no, options.no).then((res) => {
       let arr = res.data.result.data;
       console.log(arr.likeLists);
 

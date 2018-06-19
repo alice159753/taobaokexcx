@@ -110,11 +110,12 @@ export function product(page, category_no1 = 0, category_no2 = 0, order = 'sale_
 }
 
 //商品详情
-export function product_detail(no) {
+export function product_detail(user_no, no) {
   return newWork({
     url: '/product_detail.php',
     data: {
       no: no,
+      user_no: user_no,
     }
   });
 }

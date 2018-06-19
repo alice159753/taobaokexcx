@@ -53,7 +53,7 @@ export function login(e) {
 
           //发起网络请求
           wx.request({
-            url: 'https://mall.huaban1314.com/api/weixin_login.php',
+            url: 'https://shopapi.huaban1314.com/api/weixin_login.php',
             data: resUserInfo.userInfo,
             header: { 'content-type': 'application/json' },
             success: function (res) {
